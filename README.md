@@ -1,11 +1,11 @@
-[![SVG Banners](https://svg-banners.vercel.app/api?type=origin&text1=CosyVoice🤠&text2=Text-to-Speech%20💖%20Large%20Language%20Model&width=800&height=210)](https://github.com/Akshay090/svg-banners)
+**Unoffical CosyVoice 2 for ComfyUI**
 
-## 👉🏻 CosyVoice 👈🏻
-**CosyVoice 2.0**: [Demos](https://funaudiollm.github.io/cosyvoice2/); [Paper](https://arxiv.org/abs/2412.10117); [Modelscope](https://www.modelscope.cn/studios/iic/CosyVoice2-0.5B); [HuggingFace](https://huggingface.co/spaces/FunAudioLLM/CosyVoice2-0.5B)
+forked from offical CosyVoice (https://github.com/FunAudioLLM/CosyVoice).
+borrow lots of codes from (https://github.com/AIFSH/CosyVoice-ComfyUI)
+use example from CosyVoice2Example.json
 
-**CosyVoice 1.0**: [Demos](https://fun-audio-llm.github.io); [Paper](https://funaudiollm.github.io/pdf/CosyVoice_v1.pdf); [Modelscope](https://www.modelscope.cn/studios/iic/CosyVoice-300M)
 
-## Highlight🔥
+**the rest of readme is from offical site:**
 
 **CosyVoice 2.0** has been released! Compared to version 1.0, the new version offers more accurate, more stable, faster, and better speech generation capabilities.
 ### Multilingual
@@ -84,10 +84,6 @@ We strongly recommend that you download our pretrained `CosyVoice2-0.5B` `CosyVo
 # SDK模型下载
 from modelscope import snapshot_download
 snapshot_download('iic/CosyVoice2-0.5B', local_dir='pretrained_models/CosyVoice2-0.5B')
-snapshot_download('iic/CosyVoice-300M', local_dir='pretrained_models/CosyVoice-300M')
-snapshot_download('iic/CosyVoice-300M-25Hz', local_dir='pretrained_models/CosyVoice-300M-25Hz')
-snapshot_download('iic/CosyVoice-300M-SFT', local_dir='pretrained_models/CosyVoice-300M-SFT')
-snapshot_download('iic/CosyVoice-300M-Instruct', local_dir='pretrained_models/CosyVoice-300M-Instruct')
 snapshot_download('iic/CosyVoice-ttsfrd', local_dir='pretrained_models/CosyVoice-ttsfrd')
 ```
 
@@ -95,10 +91,6 @@ snapshot_download('iic/CosyVoice-ttsfrd', local_dir='pretrained_models/CosyVoice
 # git模型下载，请确保已安装git lfs
 mkdir -p pretrained_models
 git clone https://www.modelscope.cn/iic/CosyVoice2-0.5B.git pretrained_models/CosyVoice2-0.5B
-git clone https://www.modelscope.cn/iic/CosyVoice-300M.git pretrained_models/CosyVoice-300M
-git clone https://www.modelscope.cn/iic/CosyVoice-300M-25Hz.git pretrained_models/CosyVoice-300M-25Hz
-git clone https://www.modelscope.cn/iic/CosyVoice-300M-SFT.git pretrained_models/CosyVoice-300M-SFT
-git clone https://www.modelscope.cn/iic/CosyVoice-300M-Instruct.git pretrained_models/CosyVoice-300M-Instruct
 git clone https://www.modelscope.cn/iic/CosyVoice-ttsfrd.git pretrained_models/CosyVoice-ttsfrd
 ```
 
@@ -111,19 +103,6 @@ cd pretrained_models/CosyVoice-ttsfrd/
 unzip resource.zip -d .
 pip install ttsfrd_dependency-0.1-py3-none-any.whl
 pip install ttsfrd-0.4.2-cp310-cp310-linux_x86_64.whl
-```
-
-**Basic Usage**
-
-We strongly recommend using `CosyVoice2-0.5B` for better performance.
-Follow code below for detailed usage of each model.
-
-``` python
-import sys
-sys.path.append('third_party/Matcha-TTS')
-from cosyvoice.cli.cosyvoice import CosyVoice, CosyVoice2
-from cosyvoice.utils.file_utils import load_wav
-import torchaudio
 ```
 
 **CosyVoice2 Usage**
