@@ -1,0 +1,724 @@
+{
+  "last_node_id": 32,
+  "last_link_id": 29,
+  "nodes": [
+    {
+      "id": 17,
+      "type": "Note",
+      "pos": [
+        -770,
+        200
+      ],
+      "size": [
+        250,
+        110
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "需要说什么"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 18,
+      "type": "Note",
+      "pos": [
+        -770,
+        390
+      ],
+      "size": [
+        250,
+        110
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "prompt_wav里的音频说了什么，要准确写出音频里的内容"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 19,
+      "type": "Note",
+      "pos": [
+        -760,
+        580
+      ],
+      "size": [
+        250,
+        110
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "参考音频，至少3秒。不要太长，音频越长，处理时间越长，"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 20,
+      "type": "Note",
+      "pos": [
+        -750,
+        790
+      ],
+      "size": [
+        250,
+        110
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "指导字符，指定语言、语气、语速等等"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 23,
+      "type": "CosyVoice2Node",
+      "pos": [
+        60,
+        560
+      ],
+      "size": [
+        315,
+        214
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "tts_text",
+          "type": "TEXT",
+          "link": 22
+        },
+        {
+          "name": "prompt_text",
+          "type": "TEXT",
+          "link": 20,
+          "shape": 7
+        },
+        {
+          "name": "prompt_wav",
+          "type": "AUDIO",
+          "link": 21,
+          "shape": 7
+        },
+        {
+          "name": "instruct_text",
+          "type": "TEXT",
+          "link": null,
+          "shape": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            19
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CosyVoice2Node"
+      },
+      "widgets_values": [
+        1,
+        "3s极速复刻",
+        true,
+        712,
+        "randomize"
+      ]
+    },
+    {
+      "id": 26,
+      "type": "TextNode",
+      "pos": [
+        -310,
+        1070
+      ],
+      "size": [
+        270,
+        140
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "TEXT",
+          "type": "TEXT",
+          "links": [
+            26
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "TextNode"
+      },
+      "widgets_values": [
+        "Speaking very slowly"
+      ]
+    },
+    {
+      "id": 25,
+      "type": "CosyVoice2Node",
+      "pos": [
+        80,
+        1000
+      ],
+      "size": [
+        315,
+        214
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "tts_text",
+          "type": "TEXT",
+          "link": 28
+        },
+        {
+          "name": "prompt_text",
+          "type": "TEXT",
+          "link": null,
+          "shape": 7
+        },
+        {
+          "name": "prompt_wav",
+          "type": "AUDIO",
+          "link": 23,
+          "shape": 7
+        },
+        {
+          "name": "instruct_text",
+          "type": "TEXT",
+          "link": 26,
+          "shape": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            27
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CosyVoice2Node"
+      },
+      "widgets_values": [
+        1,
+        "跨语种复刻",
+        true,
+        1435,
+        "randomize"
+      ]
+    },
+    {
+      "id": 28,
+      "type": "TextNode",
+      "pos": [
+        -750,
+        990
+      ],
+      "size": [
+        420,
+        240
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "TEXT",
+          "type": "TEXT",
+          "links": [
+            28
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "TTS_Text",
+      "properties": {
+        "Node name for S&R": "TextNode"
+      },
+      "widgets_values": [
+        "As we work through this problem, I'll go slowly[laughter] to make sure we're both on the same page and understand each part."
+      ]
+    },
+    {
+      "id": 16,
+      "type": "TextNode",
+      "pos": [
+        -490,
+        390
+      ],
+      "size": [
+        340,
+        130
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "TEXT",
+          "type": "TEXT",
+          "links": [
+            20
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "TextNode"
+      },
+      "widgets_values": [
+        "好雨知时节，当春乃发生，随风潜入夜，润物细无声"
+      ]
+    },
+    {
+      "id": 10,
+      "type": "CosyVoice2Node",
+      "pos": [
+        60,
+        230
+      ],
+      "size": [
+        315,
+        214
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "tts_text",
+          "type": "TEXT",
+          "link": 10
+        },
+        {
+          "name": "prompt_text",
+          "type": "TEXT",
+          "link": null,
+          "shape": 7
+        },
+        {
+          "name": "prompt_wav",
+          "type": "AUDIO",
+          "link": 18,
+          "shape": 7
+        },
+        {
+          "name": "instruct_text",
+          "type": "TEXT",
+          "link": 16,
+          "shape": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            14
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CosyVoice2Node"
+      },
+      "widgets_values": [
+        1,
+        "自然语言控制",
+        true,
+        1851,
+        "randomize"
+      ]
+    },
+    {
+      "id": 27,
+      "type": "PreviewAudio",
+      "pos": [
+        440,
+        1010
+      ],
+      "size": [
+        315,
+        76
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 27
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewAudio"
+      },
+      "widgets_values": [
+        null
+      ]
+    },
+    {
+      "id": 22,
+      "type": "LoadAudio",
+      "pos": [
+        -470,
+        580
+      ],
+      "size": [
+        315,
+        124
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            18,
+            21,
+            23
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadAudio"
+      },
+      "widgets_values": [
+        "读诗_00001_.flac",
+        null,
+        ""
+      ]
+    },
+    {
+      "id": 13,
+      "type": "TextNode",
+      "pos": [
+        -470,
+        760
+      ],
+      "size": [
+        270,
+        140
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "TEXT",
+          "type": "TEXT",
+          "links": [
+            16
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "TextNode"
+      },
+      "widgets_values": [
+        "粤语，激昂的语气"
+      ]
+    },
+    {
+      "id": 24,
+      "type": "PreviewAudio",
+      "pos": [
+        420,
+        570
+      ],
+      "size": [
+        315,
+        76
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 19
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewAudio"
+      },
+      "widgets_values": [
+        null
+      ]
+    },
+    {
+      "id": 15,
+      "type": "PreviewAudio",
+      "pos": [
+        420,
+        250
+      ],
+      "size": [
+        315,
+        76
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 14
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewAudio"
+      },
+      "widgets_values": [
+        null
+      ]
+    },
+    {
+      "id": 14,
+      "type": "TextNode",
+      "pos": [
+        -490,
+        170
+      ],
+      "size": [
+        420,
+        170
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "TEXT",
+          "type": "TEXT",
+          "links": [
+            10,
+            22
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "TTS_Text",
+      "properties": {
+        "Node name for S&R": "TextNode"
+      },
+      "widgets_values": [
+        "君不见黄河之水天上来，奔流到海不复回"
+      ]
+    }
+  ],
+  "links": [
+    [
+      10,
+      14,
+      0,
+      10,
+      0,
+      "TEXT"
+    ],
+    [
+      14,
+      10,
+      0,
+      15,
+      0,
+      "AUDIO"
+    ],
+    [
+      16,
+      13,
+      0,
+      10,
+      3,
+      "TEXT"
+    ],
+    [
+      18,
+      22,
+      0,
+      10,
+      2,
+      "AUDIO"
+    ],
+    [
+      19,
+      23,
+      0,
+      24,
+      0,
+      "AUDIO"
+    ],
+    [
+      20,
+      16,
+      0,
+      23,
+      1,
+      "TEXT"
+    ],
+    [
+      21,
+      22,
+      0,
+      23,
+      2,
+      "AUDIO"
+    ],
+    [
+      22,
+      14,
+      0,
+      23,
+      0,
+      "TEXT"
+    ],
+    [
+      23,
+      22,
+      0,
+      25,
+      2,
+      "AUDIO"
+    ],
+    [
+      26,
+      26,
+      0,
+      25,
+      3,
+      "TEXT"
+    ],
+    [
+      27,
+      25,
+      0,
+      27,
+      0,
+      "AUDIO"
+    ],
+    [
+      28,
+      28,
+      0,
+      25,
+      0,
+      "TEXT"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "Group",
+      "bounding": [
+        50,
+        160,
+        710,
+        300
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "Group",
+      "bounding": [
+        50,
+        490,
+        715,
+        297.6000061035156
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 3,
+      "title": "Group",
+      "bounding": [
+        -760,
+        920,
+        1540,
+        310
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.7272727272727292,
+      "offset": [
+        1011.6812222245662,
+        -54.15762630712969
+      ]
+    },
+    "workspace_info": {
+      "id": "-JtnP0gmyxu9RWYv72TJk",
+      "saveLock": false,
+      "cloudID": null,
+      "coverMediaPath": null
+    },
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
